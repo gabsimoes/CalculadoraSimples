@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CalculadoraSimples</string>
+    <string name="calculate_numbers"></string>
+    <string name="app_sum">Soma</string>
+    <string name="app_subtract">Subtrair</string>
+    <string name="app_multiply">Multiplicar</string>
+    <string name="app_divide">Dividir</string>
+    <string name="calculate">Calcular</string>
+    <string name="result">Resultado: </string>
+    <string name="calculator">CALCULADORA</string>
+
+</resources>
