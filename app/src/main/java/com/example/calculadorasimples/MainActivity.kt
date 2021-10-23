@@ -14,6 +14,20 @@ class MainActivity : AppCompatActivity() {
         binding.calculate.setOnClickListener { calculateNumbers() }
     }
 
+    fun calculate(): Float{
+        val num1 = binding.insertNumber.text.toString().toFloat()
+        val num2 = binding.insertNumber2.text.toString().toFloat()
+        val optionSet = binding.calcOptions.checkedRadioButtonId
+        val result = when (optionSet) {
+            R.id.options_sum -> calculateNumbers().options_sum(num1, num2)
+            R.id.options_subtract -> calculateNumbers().options_subtract(num1, num2)
+            R.id.options_multiply -> calculateNumbers().options_multiply(num1, num2)
+            else -> calculateNumbers().options_divide(num1, num2)
+        }
+
+        return (result)
+    }
+
     class calculateNumbers {
         fun options_sum(n1: Float, n2: Float): Float {
             var soma = n1 + n2
