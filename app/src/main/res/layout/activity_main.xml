@@ -34,17 +34,17 @@
         android:layout_marginTop="36dp"
         android:text="@string/result"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/calc_options" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/calc_options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:checkedButton="@id/options_sum"
         android:orientation="vertical"
-        android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/insert_number">
+        app:layout_constraintTop_toBottomOf="@id/insert_number2">
 
         <RadioButton
             android:id="@+id/options_sum"
@@ -83,6 +83,19 @@
         android:text="@string/calculate_numbers"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title_name"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/insert_number2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="@string/calculate_numbers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/insert_number"
         tools:ignore="SpeakableTextPresentCheck" />
 
 
