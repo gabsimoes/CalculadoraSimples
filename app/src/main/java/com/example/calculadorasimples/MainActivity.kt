@@ -12,11 +12,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //botão sendo clicado e mensagem toast
         binding.calculate.setOnClickListener {
             val toast = Toast.makeText(this, "Sucesso no cálculo!", Toast.LENGTH_SHORT).show()
             calculateNumbers() }
     }
 
+    //função chamando a classe e mostrando o resultado
     fun calculateNumbers(){
         val num1 = binding.insertNumber.text.toString().toFloat()
         val num2 = binding.insertNumber2.text.toString().toFloat()
@@ -31,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         binding.result.text = resultNumber.toString()
     }
 }
+    //cálculos
     class calculate {
         fun options_sum(n1: Float, n2: Float): Float {
             var soma = n1 + n2
