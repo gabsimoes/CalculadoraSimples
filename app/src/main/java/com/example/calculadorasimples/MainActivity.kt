@@ -14,42 +14,42 @@ class MainActivity : AppCompatActivity() {
         binding.calculate.setOnClickListener { calculateNumbers() }
     }
 
-    fun calculate() {
-        val num1 = binding.insertNumber.text.toString().toFloat()
-        val num2 = binding.insertNumber2.text.toString().toFloat()
+    fun calculateNumbers(){
+        val num1 = binding.insertNumber.text.toString().toDouble()
+        val num2 = binding.insertNumber2.text.toString().toDouble()
         val optionSet = binding.calcOptions.checkedRadioButtonId
         val resultNumber = when (optionSet) {
-            R.id.options_sum -> calculateNumbers().options_sum(num1, num2)
-            R.id.options_subtract -> calculateNumbers().options_subtract(num1, num2)
-            R.id.options_multiply -> calculateNumbers().options_multiply(num1, num2)
-            else -> calculateNumbers().options_divide(num1, num2)
+            R.id.options_sum -> calculate().options_sum(num1, num2)
+            R.id.options_subtract -> calculate().options_subtract(num1, num2)
+            R.id.options_multiply -> calculate().options_multiply(num1, num2)
+            else -> calculate().options_divide(num1, num2)
         }
 
         binding.result.text = resultNumber.toString()
     }
 }
-
-    class calculateNumbers {
-        fun options_sum(n1: Float, n2: Float): Float {
+    class calculate {
+        fun options_sum(n1: Double, n2: Double): Double {
             var soma = n1 + n2
             return (soma)
         }
 
-        fun options_subtract(n1: Float, n2: Float): Float {
+        fun options_subtract(n1: Double, n2: Double): Double {
             var subtrair = n1 - n2
             return (subtrair)
         }
 
-        fun options_multiply(n1: Float, n2: Float): Float {
+        fun options_multiply(n1: Double, n2: Double): Double {
             var multiply = n1 * n2
             return (multiply)
         }
 
-        fun options_divide(n1: Float, n2: Float): Float {
+        fun options_divide(n1: Double, n2: Double): Double {
             var divide = n1 / n2
             return (divide)
         }
     }
+
 
 
 

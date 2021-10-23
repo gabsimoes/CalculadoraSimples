@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--TÍTULO-->
     <TextView
         android:id="@+id/title_name"
         android:layout_width="wrap_content"
@@ -16,6 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--BOTÃO DE CÁLCULO-->
     <Button
         android:id="@+id/calculate"
         android:layout_width="wrap_content"
@@ -26,16 +28,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/result" />
 
+    <!--RESULTADO-->
     <TextView
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
-        android:text="@string/result"
+        android:text="@string/app_result"
+        android:textSize="50px"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calc_options" />
 
+    <!--OPÇÕES-->
     <RadioGroup
         android:id="@+id/calc_options"
         android:layout_width="wrap_content"
@@ -46,24 +51,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/insert_number2">
 
+        <!--SOMA-->
         <RadioButton
             android:id="@+id/options_sum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_sum" />
 
+        <!--SUBTRAÇÃO-->
         <RadioButton
             android:id="@+id/options_subtract"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_subtract" />
 
+        <!--MULTIPLICAÇÃO-->
         <RadioButton
             android:id="@+id/options_multiply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_multiply" />
 
+        <!--DIVISÃO-->
         <RadioButton
             android:id="@+id/options_divide"
             android:layout_width="wrap_content"
@@ -72,6 +81,7 @@
 
     </RadioGroup>
 
+    <!--INSERÇÃO DO PRIMEIRO NÚMERO-->
     <EditText
         android:id="@+id/insert_number"
         android:layout_width="wrap_content"
@@ -83,8 +93,10 @@
         android:text="@string/calculate_numbers"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title_name"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:text="Primeiro número..." />
 
+    <!--INSERÇÃO DO SEGUNDO NÚMERO-->
     <EditText
         android:id="@+id/insert_number2"
         android:layout_width="wrap_content"
@@ -96,7 +108,8 @@
         android:text="@string/calculate_numbers"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/insert_number"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:text="Segundo número..." />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
