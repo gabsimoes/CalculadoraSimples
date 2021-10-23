@@ -3,7 +3,7 @@ package com.example.calculadorasimples
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.calculadorasimples.databinding.ActivityMainBinding
-import java.text.NumberFormat
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -14,7 +14,30 @@ class MainActivity : AppCompatActivity() {
         binding.calculate.setOnClickListener { calculateNumbers() }
     }
 
-    fun calculateNumbers() {
+    class calculateNumbers {
+        fun options_sum(n1: Float, n2: Float): Float {
+            var soma = n1 + n2
+            return(soma)
+        }
+
+        fun options_subtract(n1: Float, n2: Float): Float{
+            var subtrair = n1 - n2
+            return(subtrair)
+        }
+
+        fun options_multiply(n1: Float, n2: Float): Float{
+            var multiply = n1 * n2
+            return(multiply)
+        }
+
+        fun options_divide(n1: Float, n2: Float): Float{
+            var divide = n1 / n2
+            return(divide)
+        }
+    }
+
+
+    /*fun calculateNumbers() {
         val stringInTextField = binding.insertNumber.text.toString()
         val stringInTextField2 = binding.insertNumber2.text.toString()
         val number1 = stringInTextField.toFloat()
@@ -25,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             R.id.options_subtract -> calculateNumbers().subtract(number1, number2)
             R.id.options_multiply -> calculateNumbers().multiply(number1, number2)
             else -> calculateNumbers().divide(number1, number2)
-        }
+        }*/
 
 
 
@@ -36,27 +59,6 @@ class MainActivity : AppCompatActivity() {
         //val formattedCalculator = NumberFormat.getCurrencyInstance().format(tip)
         //binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
     }
-
-
-
-
-
-}
-private fun Unit.sum(number1: Float, number2: Float): Any {
-    TODO("Not yet implemented")
-}
-
-private fun Unit.subtract(number1: Float, number2: Float): Any {
-    TODO("Not yet implemented")
-}
-
-private fun Unit.multiply(number1: Float, number2: Float): Any {
-    TODO("Not yet implemented")
-}
-
-private fun Unit.divide(number1: Float, number2: Float): Any {
-    TODO("Not yet implemented")
-}
 
 
 
