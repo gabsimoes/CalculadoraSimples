@@ -2,6 +2,7 @@ package com.example.calculadorasimples
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.calculadorasimples.databinding.ActivityMainBinding
 
 
@@ -11,12 +12,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.calculate.setOnClickListener { calculateNumbers() }
+        binding.calculate.setOnClickListener {
+            val toast = Toast.makeText(this, "Sucesso no cálculo!", Toast.LENGTH_SHORT).show()
+            calculateNumbers() }
     }
 
     fun calculateNumbers(){
-        val num1 = binding.insertNumber.text.toString().toDouble()
-        val num2 = binding.insertNumber2.text.toString().toDouble()
+        val num1 = binding.insertNumber.text.toString().toFloat()
+        val num2 = binding.insertNumber2.text.toString().toFloat()
         val optionSet = binding.calcOptions.checkedRadioButtonId
         val resultNumber = when (optionSet) {
             R.id.options_sum -> calculate().options_sum(num1, num2)
@@ -29,22 +32,22 @@ class MainActivity : AppCompatActivity() {
     }
 }
     class calculate {
-        fun options_sum(n1: Double, n2: Double): Double {
+        fun options_sum(n1: Float, n2: Float): Float {
             var soma = n1 + n2
             return (soma)
         }
 
-        fun options_subtract(n1: Double, n2: Double): Double {
+        fun options_subtract(n1: Float, n2: Float): Float {
             var subtrair = n1 - n2
             return (subtrair)
         }
 
-        fun options_multiply(n1: Double, n2: Double): Double {
+        fun options_multiply(n1: Float, n2: Float): Float {
             var multiply = n1 * n2
             return (multiply)
         }
 
-        fun options_divide(n1: Double, n2: Double): Double {
+        fun options_divide(n1: Float, n2: Float): Float {
             var divide = n1 / n2
             return (divide)
         }
