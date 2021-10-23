@@ -6,7 +6,7 @@
     <string name="app_multiply">Multiplicar</string>
     <string name="app_divide">Dividir</string>
     <string name="calculate">Calcular</string>
-    <string name="result">Resultado: %s</string>
+    <string name="result">Resultado: </string>
     <string name="calculator">CALCULADORA</string>
 
 </resources>
